@@ -1,0 +1,15 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Welcome title="about" />
+    <div x-data="{ open: false }" class="rounded bg-slate-400 p-4 text-white">
+      Using Tailwind style
+      <button @click="open = !open" class="rounded bg-blue-700 p-2 text-white">
+        Toggle with Alpine
+      </button>
+      <div x-show="open" x-cloak>Toggle with Alpine</div>
+    </div>
+</Layout>
